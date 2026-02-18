@@ -24,7 +24,7 @@
         <span>PulseCRM</span>
       </a>
       <h1>Welcome back</h1>
-      <p>Log in to manage your revenue workspace and collaborate with your team.</p>
+      <p>Log in to manage your revenue workspace.</p>
       <form data-validate>
         <div class="input-group">
           <label for="login-email">Work email</label>
@@ -37,10 +37,13 @@
             required>
           <span class="form-error" aria-live="polite"></span>
         </div>
-        <label class="input-group" style="flex-direction:row;align-items:center;gap:0.6rem;">
-          <input type="checkbox" name="remember">
-          <span>Remember me</span>
-        </label>
+        <div class="auth-options">
+          <label class="auth-check">
+            <input type="checkbox" name="remember">
+            <span>Remember me</span>
+          </label>
+          <a href="reset-password.html" class="auth-link">Forgot password?</a>
+        </div>
         <button class="btn btn-primary" type="submit">Log in</button>
       </form>
       <div class="card-divider"></div>
@@ -58,64 +61,7 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-top">
-      <div class="footer-brand">
-        <a href="index.html" class="brand" aria-label="PulseCRM Home">
-          <span class="brand-logo">P</span>
-          <span>PulseCRM</span>
-        </a>
-        <p>PulseCRM is the modern customer relationship intelligence platform helping revenue teams orchestrate
-          connected customer journeys.</p>
-        <div class="socials" aria-label="Social media">
-          <a href="#" aria-label="PulseCRM on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" aria-label="PulseCRM on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#" aria-label="PulseCRM on YouTube"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul class="footer-links">
-          <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Resources</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Product</h4>
-        <ul class="footer-links">
-          <li><a href="features.html">Features</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="faq.html">FAQs</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Stay in the loop</h4>
-        <form class="surface-card" data-validate>
-          <div class="input-group">
-            <label for="login-footer-email">Work email</label>
-            <input type="email" id="login-footer-email" name="email" placeholder="you@company.com" required>
-            <span class="form-error" aria-live="polite"></span>
-          </div>
-          <button class="btn btn-primary" type="submit">Join newsletter</button>
-        </form>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <span>© <span id="year">2026</span> PulseCRM. All rights reserved.</span>
-      <div class="pill-list">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="faq.html">Support</a>
-      </div>
-    </div>
-  </footer>
-
   <script src="js/main.js" defer></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 
 </html>
