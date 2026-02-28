@@ -624,13 +624,13 @@ main {
 .home-demo-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .home-demo-card .section-title,
 .home-demo-card .section-description {
-  text-align: center;
+  text-align: left;
 }
 
 .demo-list {
@@ -657,7 +657,8 @@ main {
 }
 
 .home-demo-card .btn {
-  margin-inline: auto;
+  align-self: center;
+  margin-top: 1rem;
 }
 
 .pricing-grid {
@@ -796,6 +797,17 @@ thead th {
   gap: 1rem;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
+  margin-bottom: 2rem;
+}
+
+.wide-grid {
+  width: min(1400px, 94vw);
+  margin-inline: auto;
+}
+
+.integrations-card {
+  display: flex;
+  flex-direction: column;
 }
 
 .logo-grid img {
