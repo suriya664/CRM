@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAI3EUVDP4MZVnN1V8C4l+XwrXgVMYp0PtZVxg7V7yYug=="
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="css/style.css">
@@ -69,37 +69,44 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero hero-split">
       <div class="container hero-grid">
         <div data-reveal>
           <span class="section-subtitle">Feature Overview</span>
-          <h1>One modern workspace to orchestrate every customer journey</h1>
+          <h1>One modern workspace for every customer journey</h1>
           <p>PulseCRM gives go-to-market teams the toolkit to capture, nurture, close, and delight customers with
             automation and insights in every workflow.</p>
-          <div class="hero-actions">
+          <div class="hero-actions" style="justify-content: flex-start;">
             <a class="btn btn-primary" href="pricing.html">Start Free Trial</a>
-            <a class="btn btn-outline" href="dashboard.html">Explore interactive demo</a>
+            <a class="btn btn-outline" href="dashboard.html">Live Demo</a>
           </div>
         </div>
-        <div class="surface-card" data-reveal>
-          <span class="chip"><i class="fa-solid fa-layer-group"></i> Feature clusters</span>
-          <h2 class="section-title">Platform pillars</h2>
-          <ul class="feature-card" role="list">
-            <li><strong>Unified CRM database</strong> with streaming enrichment, duplicate prevention, and GDPR
-              compliance.</li>
-            <li><strong>Collaborative workspaces</strong> for sales, marketing, and service with shared playbooks.</li>
-            <li><strong>Intelligent analytics</strong> delivering real-time forecasting and pipeline health insights.
-            </li>
-            <li><strong>Automation and AI</strong> that streamlines outreach, routing, and customer onboarding.</li>
-          </ul>
+        <div class="surface-card hero-visual-card" data-reveal
+          style="padding: 0; overflow: hidden; border-radius: 24px;">
+          <div
+            style="background: var(--color-surface); padding: 2rem; border-bottom: 1px solid var(--color-border); display: flex; gap: 1rem;">
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56;"></div>
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f;"></div>
+          </div>
+          <div style="padding: 2.5rem;">
+            <span class="chip" style="margin-bottom: 1.5rem;"><i class="fa-solid fa-layer-group"></i> Feature
+              Clusters</span>
+            <h2 class="section-title" style="text-align: left; font-size: 1.8rem;">Platform Pillars</h2>
+            <ul class="demo-list" role="list" style="text-align: left; align-items: flex-start;">
+              <li style="margin-bottom: 1rem;"><strong>Unified CRM database</strong> with streaming enrichment.</li>
+              <li style="margin-bottom: 1rem;"><strong>Collaborative workspaces</strong> for sales and marketing.</li>
+              <li style="margin-bottom: 1rem;"><strong>Intelligent analytics</strong> for real-time forecasting.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section">
+      <span class="section-subtitle">Sales execution</span>
+      <h2 class="section-title">Close deals faster with guided workflows</h2>
       <div class="container">
-        <span class="section-subtitle">Sales execution</span>
-        <h2 class="section-title">Close deals faster with guided workflows</h2>
         <div class="grid grid-3 sales-execution-grid">
           <article class="surface-card feature-card" data-reveal>
             <span class="icon-circle" aria-hidden="true">
@@ -156,9 +163,9 @@
     </section>
 
     <section class="section">
+      <span class="section-subtitle">Marketing automation</span>
+      <h2 class="section-title">Attract, score, and nurture the right buyers</h2>
       <div class="container">
-        <span class="section-subtitle">Marketing automation</span>
-        <h2 class="section-title">Attract, score, and nurture the right buyers</h2>
         <div class="grid grid-2">
           <div class="surface-card marketing-card" data-reveal>
             <h3>Lifecycle journeys</h3>
@@ -185,9 +192,9 @@
     </section>
 
     <section class="section">
+      <span class="section-subtitle">Customer success</span>
+      <h2 class="section-title">Deliver proactive support and retention plays</h2>
       <div class="container">
-        <span class="section-subtitle">Customer success</span>
-        <h2 class="section-title">Deliver proactive support and retention plays</h2>
         <div class="grid grid-3 customer-success-grid">
           <article class="surface-card feature-card" data-reveal>
             <span class="icon-circle" aria-hidden="true">
@@ -285,9 +292,9 @@
     </section>
 
     <section class="section">
+      <span class="section-subtitle">Security &amp; compliance</span>
+      <h2 class="section-title">Enterprise-grade trust baked in</h2>
       <div class="container">
-        <span class="section-subtitle">Security &amp; compliance</span>
-        <h2 class="section-title">Enterprise-grade trust baked in</h2>
         <div class="grid grid-3 security-grid">
           <article class="surface-card feature-card" data-reveal>
             <span class="icon-circle" aria-hidden="true">

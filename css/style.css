@@ -107,7 +107,7 @@ main {
 }
 
 .section {
-  padding: clamp(4rem, 8vw, 6rem) 0;
+  padding: clamp(4rem, 8vw, 6rem) 5%;
 }
 
 .section-subtitle {
@@ -123,19 +123,21 @@ main {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 .section-title {
-  margin: clamp(1.1rem, 3vw, 1.8rem) 0;
+  margin: clamp(1.1rem, 3vw, 1.8rem) auto;
   font-size: clamp(2.3rem, 4vw, 3.2rem);
   line-height: 1.1;
   color: var(--color-heading);
   text-align: center;
+  max-width: 900px;
 }
 
 .section-description {
   margin-bottom: clamp(2rem, 4vw, 3rem);
-  max-width: 680px;
+  max-width: 720px;
   color: var(--color-muted);
   font-size: 1.08rem;
   margin-inline: auto;
@@ -209,6 +211,13 @@ main {
 .btn-outline:hover {
   color: var(--color-primary);
   border-color: rgba(37, 99, 235, 0.4);
+}
+
+.btn-lg {
+  padding: 1.1rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 18px;
 }
 
 .chip {
@@ -373,7 +382,7 @@ main {
 
 .hero {
   position: relative;
-  padding: clamp(5rem, 10vw, 8rem) 0 clamp(3.5rem, 9vw, 6.2rem);
+  padding: clamp(5rem, 10vw, 8rem) 5% clamp(3.5rem, 9vw, 6.2rem);
   overflow: hidden;
 }
 
@@ -498,10 +507,90 @@ main {
   color: var(--color-primary);
 }
 
-.metric-card strong {
-  display: block;
-  font-size: 1.45rem;
-  color: var(--color-heading);
+/* --- Variation Styles --- */
+.hero-centered {
+  text-align: center;
+}
+
+.hero-centered .hero-grid {
+  grid-template-columns: 1fr;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.hero-centered .hero-actions {
+  justify-content: center;
+}
+
+.hero-centered .hero-metrics {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.hero-split {
+  padding: clamp(6rem, 12vw, 10rem) 0;
+  background: linear-gradient(to right, var(--color-surface) 50%, var(--color-bg) 50%);
+}
+
+@media (max-width: 992px) {
+  .hero-split {
+    background: var(--color-surface);
+  }
+}
+
+.hero-minimal-centered {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  text-align: center;
+}
+
+.hero-minimal-centered .hero-grid {
+  grid-template-columns: 1fr;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.feature-staggered {
+  display: grid;
+  gap: 3rem;
+}
+
+.feature-staggered .feature-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.feature-staggered .feature-item:nth-child(even) .feature-content {
+  order: 2;
+}
+
+@media (max-width: 768px) {
+  .feature-staggered .feature-item {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .feature-staggered .feature-item:nth-child(even) .feature-content {
+    order: 0;
+  }
+}
+
+.hero-impact {
+  background: radial-gradient(circle at top right, rgba(124, 58, 237, 0.08), transparent 40%),
+    radial-gradient(circle at bottom left, rgba(37, 99, 235, 0.08), transparent 40%);
+}
+
+.hero-impact .hero-grid {
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+@media (max-width: 900px) {
+  .hero-impact .hero-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .icon-circle {
@@ -891,7 +980,7 @@ thead th {
 
 .faq-accordion {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .faq-item {
@@ -1120,6 +1209,35 @@ form {
 .input-group {
   display: grid;
   gap: 0.55rem;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon i {
+  position: absolute;
+  left: 1.1rem;
+  color: var(--color-muted);
+  pointer-events: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.input-with-icon input,
+.input-with-icon select,
+.input-with-icon textarea {
+  padding-left: 3rem !important;
+}
+
+.input-with-icon:focus-within i {
+  color: var(--color-primary);
+}
+
+.input-with-icon.textarea-icon i {
+  top: 1.1rem;
 }
 
 .contact-message-form {
@@ -2503,4 +2621,16 @@ body[data-rtl="true"] .dashboard {
 .social-hub-list a:hover {
   transform: translateY(-8px) scale(1.1);
   filter: drop-shadow(0 10px 20px rgba(37, 99, 235, 0.3));
+}
+
+.hero-minimal-centered .hero-actions .btn[aria-pressed="true"] {
+  background: var(--color-primary);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+.hero-minimal-centered .hero-actions .btn[aria-pressed="false"] {
+  background: transparent;
+  color: var(--color-muted);
 }
