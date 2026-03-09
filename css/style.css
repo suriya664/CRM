@@ -566,11 +566,16 @@ main {
   order: 2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .feature-staggered .feature-item {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
+  }
+
+  .feature-staggered .icon-circle,
+  .feature-staggered .demo-list {
+    margin-inline: auto;
   }
 
   .feature-staggered .feature-item:nth-child(even) .feature-content {
